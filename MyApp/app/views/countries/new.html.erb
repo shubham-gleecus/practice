@@ -1,0 +1,10 @@
+<h1>Add new country</h1>
+
+<h1>Fill-up</h1>
+
+
+<%= form_for @country do |c|%>
+<%= c.text_field :name%><br>
+<%= c.text_field :code%>
+<%= c.submit%>
+<%end%>

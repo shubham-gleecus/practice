@@ -1,0 +1,9 @@
+<h1><%= @country.name %></h1>
+
+<%= link_to "edit", action: "edit", controller: "countries", id: @country.id%>
+<br>
+<%#= link_to("Delete", "#{@country.id}", method: :delete)%>
+<%= link_to("Delete", delete_country_path(@country.id), method: :delete)%>
+<hr />
+
+<%= link_to 'Back', action: 'index', controller: "countries" %>

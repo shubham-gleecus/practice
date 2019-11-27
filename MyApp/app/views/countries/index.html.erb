@@ -1,0 +1,13 @@
+<% if @countries.blank? %>
+<p>There are not any country currently in the system.</p>
+<% else %>
+<p>These are the current country in our system</p>
+
+<ul id = "country">
+   <% @countries.each do |c| %>
+   <li><%=link_to c.name, {:action => "show", :id => c.id} -%></li>
+   <% end %>
+</ul>
+
+<% end %>
+<p><%= link_to "Add new country", {:action => 'new' }%></p>

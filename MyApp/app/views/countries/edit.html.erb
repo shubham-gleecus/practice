@@ -1,0 +1,10 @@
+<h1> <%= @country.name %></h1>
+<h1> <%= @country.code %></h1>
+
+<h2>To Edit that</h2>
+<%= form_for @country, url: update_country_path(@country.id), method: :put do |c|%>
+<%= c.text_field :name%><br>
+<%= c.text_field :code%>
+<%= c.submit%>
+<%end%>ss
+

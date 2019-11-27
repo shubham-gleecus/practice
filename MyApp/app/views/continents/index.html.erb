@@ -1,0 +1,26 @@
+<%= stylesheet_link_tag "style.css" %>
+
+<body id="body">
+
+	<% if @continents.blank? %>
+		<p id ="head">There are not any continents currently in the system.</p>
+	<% else %>
+	<p id = "head">These are the current continents in our system</p>
+
+	<ul id = "continent">
+		<table>
+   			<% @continents.each do |c| %>
+   				
+   				<tr><td><li></td><td><%= c.name -%></td>
+   				<td><%= c.short_name -%></td>
+   				<td><%= link_to "Show more", {action: 'show', id: c.id }%></td>
+   				<td><%= link_to "Edit", {action: 'edit', id: c.id }%></td>
+   				<td><%= link_to("Delete", continent_path(c.id), method: :delete)%></td></li></tr>
+   			<% end %>
+   		</table>
+	</ul>
+	<% end %>
+</body>
+<footer>
+	<p><%= link_to "Add new continent", { action: 'new' }%></p>
+</footer>

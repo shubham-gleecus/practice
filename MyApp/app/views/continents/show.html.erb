@@ -1,0 +1,16 @@
+<h1 id= "head"><%= @continent.name %></h1>
+<h2 ><%= @continent.short_name %></h2>
+
+<span> To edit click  
+	<%= link_to "here", action: "edit", controller: "continents", id: @continent.id%>
+</span>
+<br>
+<%#= link_to("Delete", "#{@country.id}", method: :delete)%>
+<span>To delete click
+	<%= link_to("here", continent_path(@continent.id), method: :delete)%>
+</span>
+<hr />
+
+<footer>
+	<%= link_to 'Back', action: 'index', controller: "continents" %>
+</footer>

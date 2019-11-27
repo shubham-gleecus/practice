@@ -1,0 +1,21 @@
+<%= form_with model: @continent, local: true do |form| %>
+ 
+  <p>
+    <%= form.label :name %><br>
+    <%= form.text_field :name %>
+  </p>
+ 
+  <p>
+    <%= form.label :short_name %><br>
+    <%= form.text_area :short_name %>
+  </p>
+ 
+  <p>
+    <%= form.submit %>
+  </p>
+
+  <footer>
+    <%= link_to 'Go Back', action: 'index', controller: "continents" %>
+  </footer>
+ 
+<% end %>
